@@ -4,9 +4,11 @@ import subprocess
 import multiprocessing
 
 def a_test(test_dir):
+    os.chdir(test_dir)
     # Make Makefile
-    cmd = ["Rscript", "COVIDScenarioPipeline/R/scripts/make_makefile.R",
-            "-c", f"{test_dir}/config.yml",
+    cmd = ["Rscript", "../COVIDScenarioPipeline/R/scripts/make_makefile.R",
+            "-c", f"config.yml",
+            "-p", "../COVIDScenarioPipeline",
             "-n", str(multiprocessing.cpu_count())]
     complete = subprocess.run(cmd)
     assert complete.returncode == 0
@@ -19,6 +21,10 @@ def a_test(test_dir):
 
 def teardown_function(self):
     subprocess.run(["make", "clean"])
+    os.chdir("..")
 
 def test_1():
     a_test("test1")
+
+def test_importation():
+    a_test("test_importation")
