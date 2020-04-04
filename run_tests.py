@@ -5,6 +5,8 @@ import multiprocessing
 
 def a_test(test_dir):
     os.chdir(test_dir)
+    subprocess.run(["make", "clean"])
+
     # Make Makefile
     cmd = ["Rscript", "../COVIDScenarioPipeline/R/scripts/make_makefile.R",
             "-c", f"config.yml",

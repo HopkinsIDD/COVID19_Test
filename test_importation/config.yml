@@ -6,17 +6,16 @@ dt: 0.25
 dynfilter_path: data/filter.txt
 
 spatial_setup:
-  base_path: data/HI
+  base_path: data
   setup_name: test_importation
-  geodata: ../geodata.csv
-  mobility: ../mobility.txt
+  geodata: geodata.csv
+  mobility: mobility.txt
   popnodes: population
   nodenames: geoid
   census_year: 2018
   modeled_states: 
     - HI
-  # shapefile_name: hawaii.shp
-  # shapefile: hawaii.shp
+  shapefile: HI/shp/counties_2018_HI.shp
 
 importation:
   census_api_key: "c235e1b5620232fab506af060c5f8580604d89c1"
