@@ -18,5 +18,4 @@ def teardown_function(self):
     subprocess.run(["make", "clean"])
 
 def test_1():
-
     a_test("test1")
