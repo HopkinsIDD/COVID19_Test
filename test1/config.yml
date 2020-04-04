@@ -5,8 +5,7 @@ nsimulations: 1
 dt: 0.25
 
 spatial_setup:
-  census_year: 2010
-  base_path: test1/data
+  base_path: data
   setup_name: test1
   geodata: geodata.csv
   mobility: mobility.txt
@@ -15,7 +14,7 @@ spatial_setup:
 
 seeding:
   method: PoissonDistributed
-  lambda_file: test1/data/seeding.csv
+  lambda_file: data/seeding.csv
 
 seir:
   parameters:
