@@ -1,5 +1,5 @@
-# COVID19_Minimal
-A minimal repository that contains everything needed to run the COVIDScenarioPipeline on fake data
+# COVID19_Test
+A repository of test data for the COVIDScenarioPipeline
 
 See the wiki for details on getting started.
 
