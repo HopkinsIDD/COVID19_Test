@@ -6,7 +6,8 @@ import multiprocessing
 def a_test(test_dir):
     # Make Makefile
     cmd = ["Rscript", "COVIDScenarioPipeline/R/scripts/make_makefile.R",
-            f"{test_dir}/config.yml", "COVIDScenarioPipeline", str(multiprocessing.cpu_count())]
+            "-c", f"{test_dir}/config.yml",
+            "-n", str(multiprocessing.cpu_count())]
     complete = subprocess.run(cmd)
     assert complete.returncode == 0
     assert os.path.exists("Makefile")
