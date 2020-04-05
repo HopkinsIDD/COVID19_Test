@@ -50,7 +50,7 @@ def test_importation():
     _success("test_importation")
 
     assert_file("data/filter.txt")
-    assert_dir("data/HI/shp")
+    assert_dir("data/shp")
     assert_dir("importation")
 
 
