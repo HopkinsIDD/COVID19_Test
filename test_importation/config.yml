@@ -10,7 +10,7 @@ spatial_setup:
   setup_name: test_importation
   geodata: geodata.csv
   mobility: mobility.txt
-  popnodes: population
+  popnodes: pop2010
   nodenames: geoid
   census_year: 2018
   modeled_states: 
